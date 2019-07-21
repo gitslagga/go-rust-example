@@ -38,3 +38,11 @@ func main() {
         fmt.Println(f3())
         fmt.Println(f4())
 }
+
+
+
+// will print 
+// 1
+// 5
+// 10
+// 1
