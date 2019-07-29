@@ -1,14 +1,14 @@
 package main
 
-import (
-"fmt"
-)
+import "fmt"
 
 func main() {
-	fmt.Println("hello world")
+	x := 1
+	p := &x         // p, of type *int, points to x
+	fmt.Println(*p) // "1"
 
-	s := fmt.Sprintf("my name is %s", "slagga")
 	// Coroutine example
-	// print(s)
-	println(s)
+	*p = 2          // equivalent to x = 2
+	println(x)  	// "2"
+
 }
