@@ -29,3 +29,6 @@ func main() {
 
     fmt.Println(total.value)
 }
+
+//output:
+//10100
