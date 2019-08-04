@@ -27,5 +27,5 @@ func main() {
     go worker(&wg)
     wg.Wait()
 
-    fmt.Println(total.value)
+    fmt.Println(total.value)    //10100
 }
