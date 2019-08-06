@@ -78,3 +78,13 @@ func (pow *ProofOfWork) Validate() bool {
 
 	return isValid
 }
+
+func proof() {
+	data1 := []byte("I like donuts")
+	data2 := []byte("I like donutsca07ca")
+	target := big.NewInt(1)
+	target.Lsh(target, uint(256 - 24))
+	fmt.Printf("%x\n", sha256.Sum256(data1))
+	fmt.Printf("%064x\n", target)
+	fmt.Printf("%x\n", sha256.Sum256(data2))
+}
