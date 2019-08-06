@@ -14,8 +14,8 @@ type CLI struct {
 
 func (cli *CLI) printUsage() {
 	fmt.Println("Usage:")
-	fmt.Println(" addblock -data BLOCK_DATA - add a block to the blockchain")
-	fmt.Println(" printchain - print all the blocks of the blockchain")
+	fmt.Println("  addblock -data BLOCK_DATA - add a block to the blockchain")
+	fmt.Println("  printchain - print all the blocks of the blockchain")
 }
 
 func (cli *CLI) validateArgs() {
@@ -35,12 +35,16 @@ func (cli *CLI) printChain() {
 
 	for {
 		block := bci.Next()
-		fmt.Println("Prev Hash:%x", block.PrevBlockHash)
-		fmt.Println("Data:%s", block.Data)
-		fmt.Println("Hash:%x", block.Hash)
+		fmt.Printf("Prev. Hash: %x\n", block.PrevBlockHash)
+		fmt.Printf("Data: %s\n", block.Data)
+		fmt.Printf("Hash: %x\n", block.Hash)
 		pow := NewProofOfWork(block)
-		fmt.Println("Pow:%s", strconv.FormatBool(pow.Validate()))
+		fmt.Printf("Pow: %s\n", strconv.FormatBool(pow.Validate()))
 		fmt.Println()
+
+		if len(block.PrevBlockHash) == 0 {
+			break
+		}
 	}
 
 }
