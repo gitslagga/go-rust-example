@@ -40,3 +40,10 @@ func main() {
 	<-syncChan
 	<-syncChan
 }
+
+//The count map: map[count:{0}]. [sender]
+//The count map: map[count:{0}]. [sender]
+//The count map: map[count:{0}]. [sender]
+//The count map: map[count:{0}]. [sender]
+//The count map: map[count:{0}]. [sender]
+//Stopped. [receiver]

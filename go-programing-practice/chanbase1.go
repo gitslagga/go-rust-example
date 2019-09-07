@@ -44,3 +44,16 @@ func main() {
 	<-syncChan2
 	<-syncChan2
 }
+
+//Send: a [sender]
+//Send: b [sender]
+//Send: c [sender]
+//Send a async signal. [sender]
+//Received a sync signal and wait a second... [receiver]
+//Received: a [receiver]
+//Received: b [receiver]
+//Received: c [receiver]
+//Received: d [receiver]
+//Send: d [sender]
+//Wait 2 seconds... [sender]
+//Stopped. [receiver]

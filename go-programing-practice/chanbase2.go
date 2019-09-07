@@ -47,3 +47,16 @@ func send(strChan chan<- string, syncChan1 chan<- struct{}, syncChan2 chan<- str
 	close(strChan)
 	syncChan2 <- struct{}{}
 }
+
+//Send: a [sender]
+//Send: b [sender]
+//Send: c [sender]
+//Send a async signal. [sender]
+//Received a aync signal and wait a second... [receiver]
+//Send: d [sender]
+//Received: a receiver
+//Received: b receiver
+//Received: c receiver
+//Received: d receiver
+//Wait 2 second... [sender]
+//Stopped. [receiver]

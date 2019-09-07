@@ -33,3 +33,16 @@ func main() {
 	<-syncChan2
 	<-syncChan2
 }
+
+//Send: 0 [Sender]
+//Send: 1 [Sender]
+//Send: 2 [Sender]
+//Send: 3 [Sender]
+//Send: 4 [Sender]
+//Done. [sender]
+//Received: 0 [receiver]
+//Received: 1 [receiver]
+//Received: 2 [receiver]
+//Received: 3 [receiver]
+//Received: 4 [receiver]
+//Done. [receiver]
