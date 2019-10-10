@@ -20,3 +20,7 @@ func main() {
 		panic(value)
 	}
 }
+
+// 1
+// or
+// panic: hello
