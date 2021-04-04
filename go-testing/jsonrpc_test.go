@@ -1,4 +1,4 @@
-package go_awesome
+package go_testing
 
 import (
 	"fmt"
