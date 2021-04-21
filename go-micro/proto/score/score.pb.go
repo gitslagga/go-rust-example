@@ -20,6 +20,7 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// 基本的积分消息
 type BaseScoreInfo struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
