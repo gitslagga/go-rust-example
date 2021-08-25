@@ -1,4 +1,6 @@
-package go_awesome
+package go_testing
+
+import "testing"
 
 const (
 	UnPay = iota
@@ -36,3 +38,23 @@ func OrderStateSwitch(state int) string {
 
 	return stateDesc
 }
+
+func BenchmarkSwitch(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		OrderStateSwitch(0)
+		OrderStateSwitch(1)
+		OrderStateSwitch(2)
+		OrderStateSwitch(3)
+	}
+}
+
+func BenchmarkMap(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		OrderStateMap(0)
+		OrderStateMap(1)
+		OrderStateMap(2)
+		OrderStateMap(3)
+	}
+}
+
+// go test -bench=.
